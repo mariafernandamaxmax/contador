@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Contador: <span id="Contador"> 0 </span></h1>
+
+    <button id="Aumentar">Aumentar</button>
+    <button id="Diminuir">Diminuir</button>
+
+    <script>
+        const ContadorSpan = document.getElementById('Contador');
+        const btnAumentar = document.getElementById('Aumentar');
+        const btnDiminuir = document.getElementById('Diminuir');
+
+        let contador = 0;
+        btnAumentar.addEventListener('click',()=>{
+            contador++;
+            ContadorSpan.textContent = contador;
+        });
+        btnDiminuir.addEventListener('click',()=>{
+            contador--;
+            ContadorSpan.textContent = contador;
+        });
+
+    </script>
+</body>
+</html>
